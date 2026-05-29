@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperInstance Design System</title>
+  <link rel="stylesheet" href="superinstance.css">
+  <style>
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .swatch {
+      border: 1px solid var(--si-border);
+      border-radius: var(--si-radius-lg);
+      overflow: hidden;
+    }
+    .swatch-color {
+      height: 80px;
+    }
+    .swatch-info {
+      padding: 0.75rem;
+      background: var(--si-bg-card);
+    }
+    .swatch-info code {
+      font-size: 0.75rem;
+    }
+    .swatch-info p {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+      color: var(--si-text-secondary);
+    }
+    .component-preview {
+      background: var(--si-bg-secondary);
+      border: 1px solid var(--si-border);
+      border-radius: var(--si-radius-lg);
+      padding: 2rem;
+      margin: 1rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <section class="hero">
+    <div>
+      <span class="badge badge-green">v1.0</span>
+      <h1 class="hero-title" style="margin-top:1rem">Design <span class="accent">System</span></h1>
+      <p class="hero-subtitle">Shared design language for all SuperInstance web properties. Dark-first, monospace accents, zero dependencies.</p>
+      <div class="hero-actions">
+        <a href="superinstance.css" class="btn btn-primary" download>Download CSS</a>
+        <a href="https://github.com/SuperInstance/superinstance-design" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Source</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container section">
+    <!-- Colors -->
+    <h2>Colors</h2>
+    <p>Core palette with CSS custom properties for consistent theming.</p>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0a0a0a"></div>
+        <div class="swatch-info"><code>--si-bg-primary</code><p>#0a0a0a</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#141414"></div>
+        <div class="swatch-info"><code>--si-bg-secondary</code><p>#141414</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1a1a1a"></div>
+        <div class="swatch-info"><code>--si-bg-card</code><p>#1a1a1a</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#00ff88"></div>
+        <div class="swatch-info"><code>--si-accent-green</code><p>#00ff88</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0066ff"></div>
+        <div class="swatch-info"><code>--si-accent-blue</code><p>#0066ff</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8844ff"></div>
+        <div class="swatch-info"><code>--si-accent-purple</code><p>#8844ff</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#ff8800"></div>
+        <div class="swatch-info"><code>--si-accent-orange</code><p>#ff8800</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#e0e0e0"></div>
+        <div class="swatch-info"><code>--si-text-primary</code><p>#e0e0e0</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#888888"></div>
+        <div class="swatch-info"><code>--si-text-secondary</code><p>#888888</p></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#555555"></div>
+        <div class="swatch-info"><code>--si-text-muted</code><p>#555555</p></div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <h2 style="margin-top:2rem">Typography</h2>
+    <div class="component-preview">
+      <h1>H1 — Primary Heading</h1>
+      <h2>H2 — Section Heading</h2>
+      <h3>H3 — Subsection</h3>
+      <h4>H4 — Card Heading</h4>
+      <p>Body text uses system sans-serif. <code>Code uses monospace</code> with green accent. Regular links look <a href="#">like this</a>.</p>
+    </div>
+
+    <!-- Buttons -->
+    <h2>Buttons</h2>
+    <div class="component-preview">
+      <div class="flex" style="flex-wrap:wrap">
+        <a href="#" class="btn btn-primary">Primary</a>
+        <a href="#" class="btn btn-secondary">Secondary</a>
+        <a href="#" class="btn btn-outline">Outline</a>
+        <a href="#" class="btn btn-primary btn-sm">Small</a>
+        <a href="#" class="btn btn-primary btn-lg">Large</a>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <h2>Badges</h2>
+    <div class="component-preview">
+      <div class="flex" style="flex-wrap:wrap">
+        <span class="badge badge-green">Green</span>
+        <span class="badge badge-blue">Blue</span>
+        <span class="badge badge-purple">Purple</span>
+        <span class="badge badge-orange">Orange</span>
+      </div>
+      <div class="flex" style="flex-wrap:wrap;margin-top:1rem">
+        <span class="tag">Tag</span>
+        <span class="tag">Rust</span>
+        <span class="tag">WASM</span>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <h2>Cards</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="badge badge-green">Stable</span>
+        <h3>Component A</h3>
+        <p>A card with a badge, heading, and description. Standard pattern for feature showcases.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-purple">Experimental</span>
+        <h3>Component B</h3>
+        <p>Another card variant. Hover to see the elevation change.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-blue">New</span>
+        <h3>Component C</h3>
+        <p>Cards automatically fill available grid space and collapse on mobile.</p>
+      </div>
+    </div>
+
+    <!-- Code Block -->
+    <h2 style="margin-top:2rem">Code Blocks</h2>
+    <div class="code-block">
+      <div class="code-block-header">
+        <span>example.rs</span>
+      </div>
+      <pre><code><span class="kw">fn</span> <span class="fn">main</span>() {
+    <span class="kw">let</span> instance = <span class="fn">SuperInstance::new</span>();
+    <span class="fn">println!</span>(<span class="str">"Hello from {}"</span>, instance.<span class="fn">name</span>());
+    <span class="cmt">// This is a comment</span>
+    <span class="kw">let</span> count: <span class="type">usize</span> = <span class="num">42</span>;
+}</code></pre>
+    </div>
+
+    <!-- Table -->
+    <h2 style="margin-top:2rem">Data Tables</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>version</td>
+          <td class="text-mono">1.0.0</td>
+          <td><span class="badge badge-green">Stable</span></td>
+        </tr>
+        <tr>
+          <td>dependencies</td>
+          <td class="text-mono">0</td>
+          <td><span class="badge badge-green">OK</span></td>
+        </tr>
+        <tr>
+          <td>file size</td>
+          <td class="text-mono">~15KB</td>
+          <td><span class="badge badge-blue">Info</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Forms -->
+    <h2 style="margin-top:2rem">Forms</h2>
+    <div class="component-preview">
+      <div style="max-width:400px">
+        <div class="form-group">
+          <label for="demo-input">Name</label>
+          <input type="text" id="demo-input" class="input" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="demo-select">Category</label>
+          <select id="demo-select" class="select">
+            <option>Option A</option>
+            <option>Option B</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="demo-textarea">Notes</label>
+          <textarea id="demo-textarea" class="textarea" placeholder="Optional notes..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script src="superinstance-nav.js"></script>
+  <script src="superinstance-footer.js"></script>
+  <script>
+    document.getElementById('nav-root').innerHTML = createSuperInstanceNav('home');
+    document.getElementById('footer-root').innerHTML = createSuperInstanceFooter();
+  </script>
+</body>
+</html>
