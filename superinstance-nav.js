@@ -10,11 +10,12 @@
 
 function createSuperInstanceNav(activePage) {
   const links = [
-    { label: 'Home',         href: '/',                   id: 'home' },
-    { label: 'OpenConstruct', href: '/openconstruct',     id: 'openconstruct' },
-    { label: 'Docs',         href: '/docs',               id: 'docs' },
-    { label: 'Demos',        href: '/demos',              id: 'demos' },
-    { label: 'GitHub',       href: 'https://github.com/SuperInstance', id: 'github', external: true },
+    { label: 'SuperInstance',  href: 'https://superinstance.ai',        id: 'home', isBrand: true },
+    { label: 'OpenConstruct',  href: 'https://superinstance.ai/openconstruct-landing/', id: 'openconstruct' },
+    { label: 'Cocapn',         href: 'https://superinstance.ai/cocapn-landing/',       id: 'cocapn' },
+    { label: 'Docs',           href: 'https://superinstance.ai/openconstruct-docs/',  id: 'docs' },
+    { label: 'Demos',          href: 'https://superinstance.ai/superinstance-ai-pages/demos.html', id: 'demos' },
+    { label: 'GitHub',         href: 'https://github.com/SuperInstance', id: 'github', external: true },
   ];
 
   const navLinksHTML = links.map(link => {

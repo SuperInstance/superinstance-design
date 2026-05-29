@@ -34,7 +34,7 @@ function createSuperInstanceFooter() {
         <div>
           <h4>Community</h4>
           <ul>
-            <li><a href="https://discord.gg/superinstance" target="_blank" rel="noopener noreferrer">Discord</a></li>
+            <li><a href="https://discord.com/invite/clawd" target="_blank" rel="noopener noreferrer">Discord</a></li>
             <li><a href="https://github.com/SuperInstance" target="_blank" rel="noopener noreferrer">GitHub Discussions</a></li>
             <li><a href="/contributing">Contributing</a></li>
             <li><a href="/code-of-conduct">Code of Conduct</a></li>
